@@ -1,4 +1,4 @@
-# Simple Tailwind Starter
+# Clipboard Project
 
 ## Project Setup
 
