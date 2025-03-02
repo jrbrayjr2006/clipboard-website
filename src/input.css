@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 976px;
+    --breakpoint-xl: 1440px;
+
+    --font-sans: 'Bai Jamjuree', sans-serif;
+
+    --color-strongCyan: hsl(171, 66%, 44%);
+    --color-lightBlue: hsl(233, 100%, 69%);
+    --color-darkGrayishBlue: hsl(210, 10%, 33%);
+    --color-grayishBlue: hsl(201, 11%, 66%);
+}
+
+@layer base {
+    h3 {
+        @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
+    }
+    h5 {
+        @apply mb-5 text-2xl font-bold text-darkGrayishBlue;
+    }
+}
+
+body {
+    background-image: url('../images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section-container {
+    @apply max-w-6xl mx-auto px-10 text-center;
+}
+
+.section-content {
+    @apply max-w-3xl mx-auto leading-9 text-center text-grayishBlue;
+}
+
+.button-container {
+    @apply flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4;
+}
+
+.ficon:hover {
+    filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg) brightness(101%) contrast(94%);
+}
+
+@media (max-wdith: 576px)   {
+    body {
+        background-image: url('../images/bg-header-mobile.png');
+    }
+}
+
+@extend {
+    /* --strongCyan: hsl(171, 66%, 44%);
+    --lightBlue: hsl(233, 100%, 69%);
+    --darkGrayishBlue: hsl(210, 10%, 33%);
+    --grayishBlue: hsl(201, 11%, 66%); */
+}
